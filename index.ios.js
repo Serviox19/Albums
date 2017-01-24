@@ -1,8 +1,8 @@
 import React from 'react';
 import { AppRegistry, View } from 'react-native';
 import Header from './src/components/Header';
-import Nav from './src/components/Nav';
 import AlbumList from './src/components/AlbumList';
+import FooterTabs from './src/components/Footer';
 
 // const App = () => {};
 const App = function () {
@@ -10,7 +10,7 @@ const App = function () {
     <View>
       <Header headerText='Albums' />
       <AlbumList />
-      <Nav />
+      <FooterTabs />
     </View>
   );
 };
