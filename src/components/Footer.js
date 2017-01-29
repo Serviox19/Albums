@@ -1,39 +1,31 @@
 import React from 'react';
-import { Container, Content, Footer, FooterTab, Button, Icon, Badge } from 'native-base';
+import { Text, View } from 'react-native';
 
-const FooterTabs = () => {
-  const { viewStyle } = styles;
+//basic footer created to test something
+
+const Footer = () => {
+  const { viewStyle, textStyle } = styles;
 
   return (
-    <Container style={viewStyle}>
-      <Content />
-
-      <Footer >
-        <FooterTab >
-          <Button>
-            <Badge>1</Badge>
-            <Icon name='ios-home' />
-          </Button>
-          <Button>
-            <Icon name='ios-search' />
-          </Button>
-          <Button>
-            <Badge>4</Badge>
-            <Icon name='ios-trending-up' />
-          </Button>
-          <Button>
-            <Icon name='ios-settings' />
-          </Button>
-        </FooterTab>
-      </Footer>
-    </Container>
+    <View style={viewStyle}>
+      <Text style={textStyle}>Footer</Text>
+    </View>
   );
 };
 
 const styles = {
   viewStyle: {
-    bottom: 0
+    height: 60,
+    backgroundColor: '#000',
+    marginBottom: 0,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  textStyle: {
+    color: 'blue',
+    fontSize: 25,
+    fontWeight: '500'
   }
 };
 
-export default FooterTabs;
+export default Footer;
