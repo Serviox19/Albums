@@ -4,20 +4,23 @@ import axios from 'axios';
 
 //class based component!
 class AlbumList extends Component {
+  state = { albums: [] };
+
   componentWillMount() {
     axios.get('https://rallycoding.herokuapp.com/api/music_albums')
-    .then(function (response) {
-      const albums = response.data;
-      for (var i = 0; i < albums.length; i++) {
-        console.log(albums[i]);
+    .then((response) => {
+      const album = response.data;
+      for (var i = 0; i < album.length; i++) {
+        this.setState({ albums: album[i] });
       }
     })
-    .catch(function (error) {
+    .catch((error) => {
       console.log(error);
     });
   }
 
   render() {
+    console.log(this.state);
     return (
       <View>
         <Text>Album List</Text>
