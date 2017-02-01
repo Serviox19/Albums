@@ -8,22 +8,23 @@ class AlbumList extends Component {
 
   componentWillMount() {
     axios.get('https://rallycoding.herokuapp.com/api/music_albums')
-    .then((response) => {
-      const album = response.data;
-      for (var i = 0; i < album.length; i++) {
-        this.setState({ albums: album[i] });
-      }
+    .then(response => {
+        this.setState({ albums: response.data });
     })
     .catch((error) => {
       console.log(error);
     });
   }
 
+  renderAlbums() {
+    return this.state.albums.map(album => <Text>{album.title}</Text>);
+  }
+
   render() {
-    console.log(this.state);
+    console.log(this.state.albums);
     return (
       <View>
-        <Text>Album List</Text>
+        {this.renderAlbums()}
       </View>
     );
   }
