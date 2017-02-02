@@ -1,23 +1,23 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 
-const AlbumDetail = (props) => {
-  const { viewStyle, textStyle } = styles;
+export default class AlbumDetail extends Component {
+  render() {
+    const { textStyle, viewStyle } = styles;
 
-  return (
-    <View style={viewStyle}>
-      <Text style={textStyle}>{props.album.title} || {props.album.artist}</Text>
-    </View>
-  );
-};
+    return (
+      <View style={viewStyle}>
+        <Text style={textStyle}>{this.props.album.title} || {this.props.album.artist}</Text>
+      </View>
+    );
+  }
+}
 
 const styles = {
-  viewStyle: {
-    marginBottom: 25,
-  },
   textStyle: {
     textAlign: 'center'
+  },
+  viewStyle: {
+    marginBottom: 20
   }
 };
-
-export default AlbumDetail;
