@@ -1,23 +1,13 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { Text } from 'react-native';
+import Card from './Card';
 
 export default class AlbumDetail extends Component {
   render() {
-    const { textStyle, viewStyle } = styles;
-
     return (
-      <View style={viewStyle}>
-        <Text style={textStyle}>{this.props.album.title} || {this.props.album.artist}</Text>
-      </View>
+      <Card>
+        <Text>{this.props.album.title} || {this.props.album.artist}</Text>
+      </Card>
     );
   }
 }
-
-const styles = {
-  textStyle: {
-    textAlign: 'center'
-  },
-  viewStyle: {
-    marginBottom: 20
-  }
-};
