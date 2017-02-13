@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Footer, FooterTab, Button, Icon, Badge } from 'native-base';
+import { Footer, FooterTab, Button, Icon } from 'native-base';
 
 class IonicFooter extends Component {
   render() {
@@ -8,15 +8,13 @@ class IonicFooter extends Component {
     return (
       <Footer style={footerStyle}>
         <FooterTab>
-          <Button>
-            <Badge>1</Badge>
+          <Button onPress={this.logStuff()}>
             <Icon name='ios-home' />
           </Button>
           <Button>
             <Icon name='ios-search' />
           </Button>
           <Button>
-            <Badge>4</Badge>
             <Icon name='ios-trending-up' />
           </Button>
           <Button>
@@ -25,6 +23,9 @@ class IonicFooter extends Component {
         </FooterTab>
       </Footer>
     );
+  }
+  logStuff() {
+    console.log('Hello');
   }
 }
 
