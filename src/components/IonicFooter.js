@@ -8,7 +8,7 @@ class IonicFooter extends Component {
     return (
       <Footer style={footerStyle}>
         <FooterTab>
-          <Button onPress={this.logStuff()}>
+          <Button>
             <Icon name='ios-home' />
           </Button>
           <Button>
@@ -23,9 +23,6 @@ class IonicFooter extends Component {
         </FooterTab>
       </Footer>
     );
-  }
-  logStuff() {
-    console.log('Hello');
   }
 }
 

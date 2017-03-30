@@ -20,7 +20,7 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     marginTop: 22,
-    marginBottom: 20,
+    marginBottom: 0,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 3.5 },
     shadowOpacity: 0.3,
