@@ -8,7 +8,7 @@ class AlbumList extends Component {
   state = { albums: [] };
 
   componentWillMount() {
-    axios.get('https://shrouded-scrubland-99138.herokuapp.com/albums')
+    axios.get('https://shrouded-scrubland-99138.herokuapp.com/api/albums')
     .then(response => {
         this.setState({ albums: response.data });
     })
