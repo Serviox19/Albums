@@ -30,8 +30,8 @@ const styles = {
   textStyle: {
     height: 30,
     fontSize: 25,
-    fontWeight: '500',
-    color: 'blue'
+    fontWeight: '600',
+    color: '#000'
   }
 };
 

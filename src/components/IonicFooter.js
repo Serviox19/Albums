@@ -27,7 +27,15 @@ class IonicFooter extends Component {
 }
 
 const styles = {
-
+  footerStyle: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    bottom: 0
+  },
+  buttonStyles: {
+    color: '#000'
+  }
 };
 
 export default IonicFooter;

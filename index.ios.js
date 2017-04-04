@@ -10,9 +10,7 @@ const App = function () {
     <View>
       <Header headerText='Albums' />
       <AlbumList />
-      <View>
-        <IonicFooter />
-      </View>
+      <IonicFooter />
     </View>
   );
 };

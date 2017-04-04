@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Text } from 'react-native';
-import Card from './Card';
-import CardItem from './CardItem';
-import CardItemImage from './CardItemImage';
+import Card from './Card/Card';
+import CardItem from './Card/CardItem';
+import CardItemImage from './Card/CardItemImage';
 
 export default class AlbumDetail extends Component {
   render() {
@@ -25,7 +25,7 @@ export default class AlbumDetail extends Component {
 const styles = {
   textStyle: {
     fontSize: 16,
-    color: 'red',
+    color: '#000',
     fontWeight: '600'
   },
   cardStyle: {
