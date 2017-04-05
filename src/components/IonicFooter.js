@@ -4,7 +4,7 @@ import { Footer, FooterTab, Button, Icon } from 'native-base';
 
 class IonicFooter extends Component {
 
-  onButtonPress() {
+  homeButtonPress() {
     console.log('Button has been pressed!');
   }
 
@@ -14,7 +14,7 @@ class IonicFooter extends Component {
     return (
       <Footer style={footerStyle}>
         <FooterTab>
-          <Button onPress={this.onButtonPress}>
+          <Button onPress={this.homeButtonPress}>
             <Icon name='ios-home' />
             <Text>Home</Text>
           </Button>
@@ -41,7 +41,8 @@ const styles = {
     position: 'absolute',
     left: 0,
     right: 0,
-    bottom: 0
+    bottom: 0,
+    zIndex: 100
   }
 };
 
