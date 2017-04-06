@@ -24,13 +24,20 @@ class AlbumList extends Component {
   }
 
   render() {
-    console.log(this.state.albums);
+    const { viewStyle } = styles;
+    // console.log(this.state.albums);
     return (
-      <ScrollView>
+      <ScrollView style={viewStyle}>
         {this.renderAlbums()}
       </ScrollView>
     );
   }
 }
+
+const styles = {
+  viewStyle: {
+    marginBottom: 55
+  }
+};
 
 export default AlbumList;

@@ -6,13 +6,20 @@ import IonicFooter from './src/components/IonicFooter';
 
 // const App = () => {};
 const App = function () {
+  const { appStyle } = styles;
   return (
-    <View>
+    <View style={appStyle}>
       <Header headerText='Albums' />
       <AlbumList />
       <IonicFooter />
     </View>
   );
+};
+
+const styles = {
+  appStyle: {
+    backgroundColor: '#F8F8F8'
+  }
 };
 
 

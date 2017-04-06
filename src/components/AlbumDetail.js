@@ -31,9 +31,5 @@ const styles = {
   cardStyle: {
     marginLeft: 'auto',
     marginRight: 'auto'
-  },
-  imageContainerStyle: {
-    paddingLeft: 'auto',
-    paddingRight: 'auto'
   }
 };
