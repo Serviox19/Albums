@@ -1,18 +1,41 @@
-import React from 'react';
-import { AppRegistry, View } from 'react-native';
+import React, { Component } from 'react';
+import { AppRegistry } from 'react-native';
+import { StackNavigator } from 'react-navigation';
 import HomeView from './src/views/Home';
-// import SearchView from './src/views/Search';
-// import PopularView from './src/views/Popular';
+import PopularView from './src/views/Popular';
+import SearchView from './src/views/Search';
 
-// const App = () => {};
-const App = function () {
-  return (
-    <View >
-      <HomeView />
-    </View>
-  );
-};
+class HomeScreen extends Component {
+  static navigationOptions = {
+    title: 'Home',
+  };
+  render() {
+    return <HomeView />;
+  }
+}
 
+class PopularScreen extends Component {
+  static navigationOptions = {
+    title: 'Popular',
+  };
+  render() {
+    return <PopularView />;
+  }
+}
 
-//register Component to Screen
+class SearchScreen extends Component {
+  static navigationOptions = {
+    title: 'Search',
+  };
+  render() {
+    return <SearchView />;
+  }
+}
+
+const App = StackNavigator({
+  Home: { screen: HomeScreen },
+  Popular: { screen: PopularScreen },
+  Search: { screen: SearchScreen }
+});
+
 AppRegistry.registerComponent('albums', () => App);
