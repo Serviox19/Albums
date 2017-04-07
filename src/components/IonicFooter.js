@@ -24,7 +24,7 @@ class IonicFooter extends Component {
           </Button>
           <Button>
             <Icon name='ios-trending-up' />
-            <Text>Trending</Text>
+            <Text>Popular</Text>
           </Button>
           <Button>
             <Icon name='ios-list' />

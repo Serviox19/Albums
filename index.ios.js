@@ -1,25 +1,16 @@
 import React from 'react';
 import { AppRegistry, View } from 'react-native';
-import Header from './src/components/Header';
-import AlbumList from './src/components/AlbumList';
-import IonicFooter from './src/components/IonicFooter';
+import HomeView from './src/views/Home';
+// import SearchView from './src/views/Search';
+// import PopularView from './src/views/Popular';
 
 // const App = () => {};
 const App = function () {
-  const { appStyle } = styles;
   return (
-    <View style={appStyle}>
-      <Header headerText='Albums' />
-      <AlbumList />
-      <IonicFooter />
+    <View >
+      <HomeView />
     </View>
   );
-};
-
-const styles = {
-  appStyle: {
-    backgroundColor: '#F8F8F8'
-  }
 };
 
 
