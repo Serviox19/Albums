@@ -17,7 +17,7 @@ const styles = {
     borderWidth: 1,
     borderBottomWidth: 0.5,
     borderTopWidth: 0.5,
-    padding: 10,
+    padding: 8,
     backgroundColor: '#fff',
     justifyContent: 'center',
     flexDirection: 'row',
@@ -26,7 +26,8 @@ const styles = {
   },
   thumbnailStyle: {
     height: 300,
-    width: 300
+    flex: 1,
+    width: null
   }
 };
 

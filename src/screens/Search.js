@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 
-export default class PopularView extends Component {
+export default class SearchView extends Component {
   render() {
     const { viewStyle } = styles;
     return (
       <View style={viewStyle}>
-        <Text>Popular Music!</Text>
+        <Text>Search View!</Text>
       </View>
     );
   }

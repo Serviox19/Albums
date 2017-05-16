@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
 import AlbumList from '../components/AlbumList';
-import IonicFooter from '../components/IonicFooter';
+import Header from '../components/Header';
 
 export default class HomeView extends Component {
   render() {
     const { viewStyle } = styles;
     return (
       <View style={viewStyle}>
+        <Header headerText='Home' />
         <AlbumList />
-        <IonicFooter />
       </View>
     );
   }
@@ -17,7 +17,7 @@ export default class HomeView extends Component {
 
 const styles = {
   viewStyle: {
-    backgroundColor: '#3D7BBA'
-    // backgroundColor: '#F8F8F8'
+    backgroundColor: '#F8F8F8'
+    // backgroundColor: '#3D7BBA'
   }
 };

@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import { Text, View } from 'react-native';
+import { Button, Icon } from 'native-base';
 
 class Header extends Component {
   render() {
-    const { viewStyle, textStyle } = styles;
+    const { headerViewStyle, buttonStyle, textStyle } = styles;
 
     return (
-      <View style={viewStyle}>
+      <View style={headerViewStyle}>
+        <Button style={buttonStyle}>
+          <Icon name='ios-menu' style={{ color: '#000' }} />
+        </Button>
         <Text style={textStyle}>{this.props.headerText}</Text>
       </View>
     );
@@ -14,23 +18,26 @@ class Header extends Component {
 }
 
 const styles = {
-  viewStyle: {
-    height: 60,
+  headerViewStyle: {
+    flexDirection: 'row',
     backgroundColor: '#F8F8F8',
-    justifyContent: 'center',
-    alignItems: 'center',
     marginTop: 22,
     marginBottom: 0,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 3.5 },
     shadowOpacity: 0.3,
     elevation: 2,
-    position: 'relative'
+    position: 'relative',
+    alignItems: 'center'
+  },
+  buttonStyle: {
+    paddingLeft: 10,
+    paddingRight: 10,
+    backgroundColor: 'transparent'
   },
   textStyle: {
-    height: 30,
     fontSize: 25,
-    fontWeight: '600',
+    fontWeight: '500',
     color: '#000'
   }
 };

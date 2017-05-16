@@ -1,41 +1,17 @@
 import React, { Component } from 'react';
-import { AppRegistry } from 'react-native';
-import { StackNavigator } from 'react-navigation';
-import HomeView from './src/views/Home';
-import PopularView from './src/views/Popular';
-import SearchView from './src/views/Search';
+import { AppRegistry, View } from 'react-native';
+import HomeView from './src/screens/Home';
+import IonicFooter from './src/components/IonicFooter';
 
-class HomeScreen extends Component {
-  static navigationOptions = {
-    title: 'Home',
-  };
+class App extends Component {
   render() {
-    return <HomeView />;
+    return (
+      <View style={{ flex: 1 }}>
+        <HomeView />
+        <IonicFooter />
+      </View>
+    );
   }
 }
-
-class PopularScreen extends Component {
-  static navigationOptions = {
-    title: 'Popular',
-  };
-  render() {
-    return <PopularView />;
-  }
-}
-
-class SearchScreen extends Component {
-  static navigationOptions = {
-    title: 'Search',
-  };
-  render() {
-    return <SearchView />;
-  }
-}
-
-const App = StackNavigator({
-  Home: { screen: HomeScreen },
-  Popular: { screen: PopularScreen },
-  Search: { screen: SearchScreen }
-});
 
 AppRegistry.registerComponent('albums', () => App);
