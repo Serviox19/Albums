@@ -4,14 +4,18 @@ import { Button, Icon } from 'native-base';
 
 class Header extends Component {
   render() {
-    const { headerViewStyle, buttonStyle, textStyle } = styles;
+    const { headerViewStyle, buttonView, textView, buttonStyle, textStyle } = styles;
 
     return (
       <View style={headerViewStyle}>
-        <Button style={buttonStyle}>
-          <Icon name='ios-menu' style={{ color: '#000' }} />
-        </Button>
-        <Text style={textStyle}>{this.props.headerText}</Text>
+        <View style={buttonView}>
+          <Button style={buttonStyle}>
+            <Icon name='ios-menu' style={{ color: '#000' }} />
+          </Button>
+        </View>
+        <View style={textView}>
+          <Text style={textStyle}>{this.props.headerText}</Text>
+        </View>
       </View>
     );
   }
@@ -20,19 +24,25 @@ class Header extends Component {
 const styles = {
   headerViewStyle: {
     flexDirection: 'row',
-    backgroundColor: '#F8F8F8',
+    height: 60,
+    backgroundColor: '#D3D3D3',
     marginTop: 22,
     marginBottom: 0,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 3.5 },
     shadowOpacity: 0.3,
     elevation: 2,
-    position: 'relative',
-    alignItems: 'center'
+    position: 'relative'
+  },
+  buttonView: {
+    alignSelf: 'center',
+    paddingLeft: 10
+  },
+  textView: {
+    alignSelf: 'center',
+    marginLeft: 105
   },
   buttonStyle: {
-    paddingLeft: 10,
-    paddingRight: 10,
     backgroundColor: 'transparent'
   },
   textStyle: {
