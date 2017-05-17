@@ -17,7 +17,6 @@ export default class HomeView extends Component {
 
 const styles = {
   viewStyle: {
-    backgroundColor: '#F8F8F8'
-    // backgroundColor: '#3D7BBA'
+    
   }
 };

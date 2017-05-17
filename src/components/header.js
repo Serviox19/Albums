@@ -3,6 +3,7 @@ import { Text, View } from 'react-native';
 import { Button, Icon } from 'native-base';
 
 class Header extends Component {
+
   render() {
     const { headerViewStyle, buttonView, textView, buttonStyle, textStyle } = styles;
 
@@ -10,7 +11,7 @@ class Header extends Component {
       <View style={headerViewStyle}>
         <View style={buttonView}>
           <Button style={buttonStyle}>
-            <Icon name='ios-menu' style={{ color: '#000' }} />
+            <Icon name='ios-menu' style={{ color: '#007aff' }} />
           </Button>
         </View>
         <View style={textView}>
@@ -25,8 +26,8 @@ const styles = {
   headerViewStyle: {
     flexDirection: 'row',
     height: 60,
-    backgroundColor: '#D3D3D3',
-    marginTop: 22,
+    paddingTop: 20,
+    paddingBottom: 5,
     marginBottom: 0,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 3.5 },
@@ -40,13 +41,13 @@ const styles = {
   },
   textView: {
     alignSelf: 'center',
-    marginLeft: 105
+    marginLeft: 114
   },
   buttonStyle: {
     backgroundColor: 'transparent'
   },
   textStyle: {
-    fontSize: 25,
+    fontSize: 22,
     fontWeight: '500',
     color: '#000'
   }
