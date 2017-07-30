@@ -7,7 +7,7 @@ const BuyButton = (props) => { // eslint-disable-line
 
   return (
     <TouchableOpacity onPress={props.buyNow} style={buttonStyle}>
-        <Text style={textStyle}>Buy Now</Text>
+      <Text style={textStyle}>{props.buttonText}</Text>
     </TouchableOpacity>
   );
 };
@@ -21,8 +21,8 @@ const styles = {
   buttonStyle: {
     margin: 5,
     backgroundColor: '#007aff',
-    borderRadius: 5,
-    borderWidth: 1,
+    borderRadius: 4,
+    borderWidth: 2,
     borderColor: '#007aff',
   }
 };

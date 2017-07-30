@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, Alert } from 'react-native';
 import { Button, Icon } from 'native-base';
 
 class Header extends Component {
@@ -10,7 +10,11 @@ class Header extends Component {
     return (
       <View style={headerViewStyle}>
         <View style={buttonView}>
-          <Button style={buttonStyle}>
+          <Button
+            onPress={() =>
+            Alert.alert('Yoooo')}
+            style={buttonStyle}
+          >
             <Icon name='ios-menu' style={{ color: '#007aff' }} />
           </Button>
         </View>

@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, Linking } from 'react-native';
 import Card from './Card/Card';
 import CardItem from './Card/CardItem';
 import CardItemImage from './Card/CardItemImage';
 import BuyButton from './buyButton';
 
 export default class AlbumDetail extends Component {
+
   render() {
     return (
       <Card style={styles.cardStyle}>
@@ -18,7 +19,10 @@ export default class AlbumDetail extends Component {
         <CardItem>
           <Text style={styles.textStyle}>{this.props.album.artist}</Text>
           <View style={styles.buttonView}>
-            <BuyButton buyNow={() => console.log(this.props.album.title)} />
+            <BuyButton
+              buyNow={() => Linking.openURL(this.props.album.purchase)}
+              buttonText="Buy Now"
+            />
           </View>
         </CardItem>
       </Card>

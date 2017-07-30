@@ -10,7 +10,7 @@ class AlbumList extends Component {
   componentWillMount() {
     axios.get('https://shrouded-scrubland-99138.herokuapp.com/api/albums')
     .then(response => {
-        this.setState({ albums: response.data });
+      this.setState({ albums: response.data });
     })
     .catch((error) => {
       console.log(error);
