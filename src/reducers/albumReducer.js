@@ -1,14 +1,12 @@
-import axios from 'axios';
+import { GET_ALBUMS } from '../actions/types';
 
-const albums = () => {
-  axios.get('https://shrouded-scrubland-99138.herokuapp.com/api/albums')
-    .then(response => {
-      console.log(response.data);
-      return response.data;
-    })
-    .catch((error) => {
-      console.log(error);
-    });
+const INITIAL_STATE = {};
+
+export default (state = INITIAL_STATE, action) => {
+  switch (action.type) {
+    case GET_ALBUMS:
+      return action.payload;
+    default:
+      return state;
+  }
 };
-
-export default () => albums;
