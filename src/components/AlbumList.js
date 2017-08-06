@@ -1,16 +1,20 @@
 import React, { Component } from 'react';
 import { ScrollView } from 'react-native';
 import { connect } from 'react-redux';
+import { albumsFetch } from '../actions';
 import AlbumDetail from './AlbumDetail';
 
 //class based component!
 class AlbumList extends Component {
 
+  componentWillMount() {
+    this.props.albumsFetch();
+  }
+
   renderAlbums() {
-    console.log(this.props);
-    // return this.props.albums.map(data =>
-    //   <AlbumDetail key={data.title} album={data} />
-    // );
+    this.props.albums.map(data =>
+      <AlbumDetail key={data.title} album={data} />
+    );
   }
 
   render() {
@@ -30,7 +34,8 @@ const styles = {
 };
 
 const mapStateToProps = state => {
+  console.log(state);
   return { albums: state.albums };
 };
 
-export default connect(mapStateToProps)(AlbumList);
+export default connect(mapStateToProps, { albumsFetch })(AlbumList);
