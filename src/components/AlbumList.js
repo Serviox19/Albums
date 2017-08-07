@@ -27,7 +27,7 @@ class AlbumList extends Component {
   }
 
   renderRow(album) {
-    return <AlbumDetail album={album.albums} />;
+    return <AlbumDetail album={album} />;
   }
 
   render() {
@@ -50,9 +50,7 @@ const styles = {
 };
 
 const mapStateToProps = state => {
-  const albums = _.map(state.albums, (albums) => {
-    return { albums };
-  });
+  const albums = _.map(state.albums);
 
   return { albums };
 };
