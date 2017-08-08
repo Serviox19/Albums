@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
+import IonicFooter from '../components/Footer';
 
 export default class MovieView extends Component {
   render() {
@@ -7,6 +8,7 @@ export default class MovieView extends Component {
     return (
       <View style={viewStyle}>
         <Text>Movie View!</Text>
+        <IonicFooter />
       </View>
     );
   }
@@ -14,6 +16,7 @@ export default class MovieView extends Component {
 
 const styles = {
   viewStyle: {
-    marginTop: 22
+    flex: 1,
+    marginTop: 20
   }
 };

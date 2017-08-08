@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Text } from 'react-native';
 import { Footer, FooterTab, Button, Icon } from 'native-base';
+import { Actions } from 'react-native-router-flux';
 
 class IonicFooter extends Component {
 
@@ -9,12 +10,16 @@ class IonicFooter extends Component {
     return (
       <Footer style={footerStyle}>
         <FooterTab>
-          <Button>
-            <Icon name='ios-musical-notes' />
+          <Button onPress={() => Actions.albums()} >
+            <Icon
+              name='ios-musical-notes'
+            />
             <Text>Albums</Text>
           </Button>
-          <Button>
-            <Icon name='ios-film' />
+          <Button onPress={() => Actions.movies()} >
+            <Icon
+              name='ios-film'
+            />
             <Text>Movies</Text>
           </Button>
           <Button>
@@ -34,9 +39,9 @@ class IonicFooter extends Component {
 const styles = {
   footerStyle: {
     position: 'absolute',
+    bottom: 0,
     left: 0,
-    right: 0,
-    bottom: 0
+    right: 0
   }
 };
 

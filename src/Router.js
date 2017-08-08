@@ -1,12 +1,14 @@
 import React from 'react';
 import { Router, Scene } from 'react-native-router-flux';
-import AlbumView from './scenes/AlbumScreen';
+import AlbumView from './scenes/Albums';
+import MoviesView from './scenes/Movies';
 
-const RouterComponent = () => {
+const RouterComponent = () => { // eslint-disable-line
   return (
-    <Router>
+    <Router sceneStyle={{ paddingTop: 65 }}>
       <Scene key="root">
-        <Scene key="home" component={AlbumView} title="Albums" />
+        <Scene key="albums" component={AlbumView} title="Albums" />
+        <Scene key="movies" component={MoviesView} title="Movies" />
       </Scene>
     </Router>
   );

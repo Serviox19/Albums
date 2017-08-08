@@ -4,7 +4,6 @@ import { createStore, applyMiddleware } from 'redux';
 import ReduxThunk from 'redux-thunk';
 import reducers from './reducers';
 import Router from './Router';
-// import IonicFooter from './components/IonicFooter';
 
 export default class App extends Component {
   render() {
