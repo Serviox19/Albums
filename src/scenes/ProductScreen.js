@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 
-export default class SearchView extends Component {
+export default class ProductView extends Component {
   render() {
     const { viewStyle } = styles;
     return (
       <View style={viewStyle}>
-        <Text>Search View!</Text>
+        <Text>Product View!</Text>
       </View>
     );
   }

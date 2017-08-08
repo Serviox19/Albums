@@ -10,20 +10,20 @@ class IonicFooter extends Component {
       <Footer style={footerStyle}>
         <FooterTab>
           <Button>
-            <Icon name='ios-home' />
-            <Text>Home</Text>
+            <Icon name='ios-musical-notes' />
+            <Text>Albums</Text>
           </Button>
           <Button>
-            <Icon name='ios-search' />
-            <Text>Search</Text>
+            <Icon name='ios-film' />
+            <Text>Movies</Text>
           </Button>
           <Button>
-            <Icon name='ios-trending-up' />
-            <Text>Popular</Text>
+            <Icon name='ios-pricetags' />
+            <Text>Products</Text>
           </Button>
           <Button>
-            <Icon name='ios-list' />
-            <Text>Library</Text>
+            <Icon name='ios-cog' />
+            <Text>Settings</Text>
           </Button>
         </FooterTab>
       </Footer>

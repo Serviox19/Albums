@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 
-export default class PopularView extends Component {
+export default class MovieView extends Component {
   render() {
     const { viewStyle } = styles;
     return (
       <View style={viewStyle}>
-        <Text>Popular View!</Text>
+        <Text>Movie View!</Text>
       </View>
     );
   }
